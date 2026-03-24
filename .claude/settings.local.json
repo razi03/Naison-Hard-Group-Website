@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:animate-ui.com)",
+      "WebFetch(domain:www.landmarklabs.co)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:assets-global.website-files.com)",
+      "WebFetch(domain:cdn.prod.website-files.com)",
+      "WebFetch(domain:shadcnregistry.com)",
+      "WebFetch(domain:tanstack.com)",
+      "Bash(cd:*)",
+      "Bash(cd /c/development/naison-hard-group && npx shadcn@latest add button card input textarea label separator badge navigation-menu sheet accordion -y 2>&1)",
+      "Bash(cd /c/development/naison-hard-group && npx shadcn@latest add \"https://animate-ui.com/r/fade\" \"https://animate-ui.com/r/slide\" \"https://animate-ui.com/r/blur\" \"https://animate-ui.com/r/zoom\" -y 2>&1)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(cd /c/development/naison-hard-group && bun run check 2>&1)",
+      "Bash(grep failed to resolve:*)",
+      "Bash(cd /c/development/naison-hard-group && npx shadcn@latest add button card input textarea label separator badge navigation-menu sheet accordion -y --overwrite 2>&1)"
+    ]
+  }
+}
