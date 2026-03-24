@@ -10,28 +10,60 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ManagementRouteImport } from './routes/management'
+import { Route as LegalRouteImport } from './routes/legal'
 import { Route as ConsultancyRouteImport } from './routes/consultancy'
 import { Route as CapitalRouteImport } from './routes/capital'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ManagementIndexRouteImport } from './routes/management/index'
 import { Route as ConsultancyIndexRouteImport } from './routes/consultancy/index'
 import { Route as CapitalIndexRouteImport } from './routes/capital/index'
+import { Route as ManagementSupportRouteImport } from './routes/management/support'
+import { Route as ManagementServicesRouteImport } from './routes/management/services'
+import { Route as ManagementPricingRouteImport } from './routes/management/pricing'
 import { Route as ManagementPortfolioRouteImport } from './routes/management/portfolio'
+import { Route as ManagementHelpRouteImport } from './routes/management/help'
+import { Route as ManagementGAndRPlasticsRouteImport } from './routes/management/g-and-r-plastics'
+import { Route as ManagementEdithoraExperienceRouteImport } from './routes/management/edithora-experience'
 import { Route as ManagementContactRouteImport } from './routes/management/contact'
+import { Route as ManagementCareersRouteImport } from './routes/management/careers'
+import { Route as ManagementBlogRouteImport } from './routes/management/blog'
 import { Route as ManagementAuraAnimaliaRouteImport } from './routes/management/aura-animalia'
 import { Route as ManagementAboutRouteImport } from './routes/management/about'
+import { Route as LegalTermsRouteImport } from './routes/legal/terms'
+import { Route as LegalPrivacyRouteImport } from './routes/legal/privacy'
+import { Route as ConsultancySupportRouteImport } from './routes/consultancy/support'
+import { Route as ConsultancySolutionsRouteImport } from './routes/consultancy/solutions'
 import { Route as ConsultancyServicesRouteImport } from './routes/consultancy/services'
+import { Route as ConsultancyPricingRouteImport } from './routes/consultancy/pricing'
+import { Route as ConsultancyHelpRouteImport } from './routes/consultancy/help'
 import { Route as ConsultancyContactRouteImport } from './routes/consultancy/contact'
+import { Route as ConsultancyCareersRouteImport } from './routes/consultancy/careers'
+import { Route as ConsultancyBlogRouteImport } from './routes/consultancy/blog'
 import { Route as ConsultancyAboutRouteImport } from './routes/consultancy/about'
+import { Route as CapitalSupportRouteImport } from './routes/capital/support'
 import { Route as CapitalServicesRouteImport } from './routes/capital/services'
+import { Route as CapitalPricingRouteImport } from './routes/capital/pricing'
+import { Route as CapitalHelpRouteImport } from './routes/capital/help'
 import { Route as CapitalContactRouteImport } from './routes/capital/contact'
+import { Route as CapitalCareersRouteImport } from './routes/capital/careers'
+import { Route as CapitalBlogRouteImport } from './routes/capital/blog'
 import { Route as CapitalAboutRouteImport } from './routes/capital/about'
 import { Route as ApiSplatRouteImport } from './routes/api.$'
+import { Route as ConsultancySolutionsIndexRouteImport } from './routes/consultancy/solutions/index'
+import { Route as ConsultancySolutionsPmToolsRouteImport } from './routes/consultancy/solutions/pm-tools'
+import { Route as ConsultancySolutionsNotionRouteImport } from './routes/consultancy/solutions/notion'
+import { Route as ConsultancySolutionsGhlRouteImport } from './routes/consultancy/solutions/ghl'
+import { Route as ConsultancySolutionsClickupRouteImport } from './routes/consultancy/solutions/clickup'
 import { Route as ApiRpcSplatRouteImport } from './routes/api.rpc.$'
 
 const ManagementRoute = ManagementRouteImport.update({
   id: '/management',
   path: '/management',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConsultancyRoute = ConsultancyRouteImport.update({
@@ -64,14 +96,55 @@ const CapitalIndexRoute = CapitalIndexRouteImport.update({
   path: '/',
   getParentRoute: () => CapitalRoute,
 } as any)
+const ManagementSupportRoute = ManagementSupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => ManagementRoute,
+} as any)
+const ManagementServicesRoute = ManagementServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => ManagementRoute,
+} as any)
+const ManagementPricingRoute = ManagementPricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => ManagementRoute,
+} as any)
 const ManagementPortfolioRoute = ManagementPortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
   getParentRoute: () => ManagementRoute,
 } as any)
+const ManagementHelpRoute = ManagementHelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => ManagementRoute,
+} as any)
+const ManagementGAndRPlasticsRoute = ManagementGAndRPlasticsRouteImport.update({
+  id: '/g-and-r-plastics',
+  path: '/g-and-r-plastics',
+  getParentRoute: () => ManagementRoute,
+} as any)
+const ManagementEdithoraExperienceRoute =
+  ManagementEdithoraExperienceRouteImport.update({
+    id: '/edithora-experience',
+    path: '/edithora-experience',
+    getParentRoute: () => ManagementRoute,
+  } as any)
 const ManagementContactRoute = ManagementContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => ManagementRoute,
+} as any)
+const ManagementCareersRoute = ManagementCareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => ManagementRoute,
+} as any)
+const ManagementBlogRoute = ManagementBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => ManagementRoute,
 } as any)
 const ManagementAuraAnimaliaRoute = ManagementAuraAnimaliaRouteImport.update({
@@ -84,9 +157,39 @@ const ManagementAboutRoute = ManagementAboutRouteImport.update({
   path: '/about',
   getParentRoute: () => ManagementRoute,
 } as any)
+const LegalTermsRoute = LegalTermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => LegalRoute,
+} as any)
+const LegalPrivacyRoute = LegalPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => LegalRoute,
+} as any)
+const ConsultancySupportRoute = ConsultancySupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => ConsultancyRoute,
+} as any)
+const ConsultancySolutionsRoute = ConsultancySolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => ConsultancyRoute,
+} as any)
 const ConsultancyServicesRoute = ConsultancyServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => ConsultancyRoute,
+} as any)
+const ConsultancyPricingRoute = ConsultancyPricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => ConsultancyRoute,
+} as any)
+const ConsultancyHelpRoute = ConsultancyHelpRouteImport.update({
+  id: '/help',
+  path: '/help',
   getParentRoute: () => ConsultancyRoute,
 } as any)
 const ConsultancyContactRoute = ConsultancyContactRouteImport.update({
@@ -94,19 +197,54 @@ const ConsultancyContactRoute = ConsultancyContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => ConsultancyRoute,
 } as any)
+const ConsultancyCareersRoute = ConsultancyCareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => ConsultancyRoute,
+} as any)
+const ConsultancyBlogRoute = ConsultancyBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => ConsultancyRoute,
+} as any)
 const ConsultancyAboutRoute = ConsultancyAboutRouteImport.update({
   id: '/about',
   path: '/about',
   getParentRoute: () => ConsultancyRoute,
+} as any)
+const CapitalSupportRoute = CapitalSupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => CapitalRoute,
 } as any)
 const CapitalServicesRoute = CapitalServicesRouteImport.update({
   id: '/services',
   path: '/services',
   getParentRoute: () => CapitalRoute,
 } as any)
+const CapitalPricingRoute = CapitalPricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => CapitalRoute,
+} as any)
+const CapitalHelpRoute = CapitalHelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => CapitalRoute,
+} as any)
 const CapitalContactRoute = CapitalContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => CapitalRoute,
+} as any)
+const CapitalCareersRoute = CapitalCareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => CapitalRoute,
+} as any)
+const CapitalBlogRoute = CapitalBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => CapitalRoute,
 } as any)
 const CapitalAboutRoute = CapitalAboutRouteImport.update({
@@ -119,6 +257,35 @@ const ApiSplatRoute = ApiSplatRouteImport.update({
   path: '/api/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConsultancySolutionsIndexRoute =
+  ConsultancySolutionsIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => ConsultancySolutionsRoute,
+  } as any)
+const ConsultancySolutionsPmToolsRoute =
+  ConsultancySolutionsPmToolsRouteImport.update({
+    id: '/pm-tools',
+    path: '/pm-tools',
+    getParentRoute: () => ConsultancySolutionsRoute,
+  } as any)
+const ConsultancySolutionsNotionRoute =
+  ConsultancySolutionsNotionRouteImport.update({
+    id: '/notion',
+    path: '/notion',
+    getParentRoute: () => ConsultancySolutionsRoute,
+  } as any)
+const ConsultancySolutionsGhlRoute = ConsultancySolutionsGhlRouteImport.update({
+  id: '/ghl',
+  path: '/ghl',
+  getParentRoute: () => ConsultancySolutionsRoute,
+} as any)
+const ConsultancySolutionsClickupRoute =
+  ConsultancySolutionsClickupRouteImport.update({
+    id: '/clickup',
+    path: '/clickup',
+    getParentRoute: () => ConsultancySolutionsRoute,
+  } as any)
 const ApiRpcSplatRoute = ApiRpcSplatRouteImport.update({
   id: '/api/rpc/$',
   path: '/api/rpc/$',
@@ -129,62 +296,142 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/capital': typeof CapitalRouteWithChildren
   '/consultancy': typeof ConsultancyRouteWithChildren
+  '/legal': typeof LegalRouteWithChildren
   '/management': typeof ManagementRouteWithChildren
   '/api/$': typeof ApiSplatRoute
   '/capital/about': typeof CapitalAboutRoute
+  '/capital/blog': typeof CapitalBlogRoute
+  '/capital/careers': typeof CapitalCareersRoute
   '/capital/contact': typeof CapitalContactRoute
+  '/capital/help': typeof CapitalHelpRoute
+  '/capital/pricing': typeof CapitalPricingRoute
   '/capital/services': typeof CapitalServicesRoute
+  '/capital/support': typeof CapitalSupportRoute
   '/consultancy/about': typeof ConsultancyAboutRoute
+  '/consultancy/blog': typeof ConsultancyBlogRoute
+  '/consultancy/careers': typeof ConsultancyCareersRoute
   '/consultancy/contact': typeof ConsultancyContactRoute
+  '/consultancy/help': typeof ConsultancyHelpRoute
+  '/consultancy/pricing': typeof ConsultancyPricingRoute
   '/consultancy/services': typeof ConsultancyServicesRoute
+  '/consultancy/solutions': typeof ConsultancySolutionsRouteWithChildren
+  '/consultancy/support': typeof ConsultancySupportRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/terms': typeof LegalTermsRoute
   '/management/about': typeof ManagementAboutRoute
   '/management/aura-animalia': typeof ManagementAuraAnimaliaRoute
+  '/management/blog': typeof ManagementBlogRoute
+  '/management/careers': typeof ManagementCareersRoute
   '/management/contact': typeof ManagementContactRoute
+  '/management/edithora-experience': typeof ManagementEdithoraExperienceRoute
+  '/management/g-and-r-plastics': typeof ManagementGAndRPlasticsRoute
+  '/management/help': typeof ManagementHelpRoute
   '/management/portfolio': typeof ManagementPortfolioRoute
+  '/management/pricing': typeof ManagementPricingRoute
+  '/management/services': typeof ManagementServicesRoute
+  '/management/support': typeof ManagementSupportRoute
   '/capital/': typeof CapitalIndexRoute
   '/consultancy/': typeof ConsultancyIndexRoute
   '/management/': typeof ManagementIndexRoute
   '/api/rpc/$': typeof ApiRpcSplatRoute
+  '/consultancy/solutions/clickup': typeof ConsultancySolutionsClickupRoute
+  '/consultancy/solutions/ghl': typeof ConsultancySolutionsGhlRoute
+  '/consultancy/solutions/notion': typeof ConsultancySolutionsNotionRoute
+  '/consultancy/solutions/pm-tools': typeof ConsultancySolutionsPmToolsRoute
+  '/consultancy/solutions/': typeof ConsultancySolutionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/legal': typeof LegalRouteWithChildren
   '/api/$': typeof ApiSplatRoute
   '/capital/about': typeof CapitalAboutRoute
+  '/capital/blog': typeof CapitalBlogRoute
+  '/capital/careers': typeof CapitalCareersRoute
   '/capital/contact': typeof CapitalContactRoute
+  '/capital/help': typeof CapitalHelpRoute
+  '/capital/pricing': typeof CapitalPricingRoute
   '/capital/services': typeof CapitalServicesRoute
+  '/capital/support': typeof CapitalSupportRoute
   '/consultancy/about': typeof ConsultancyAboutRoute
+  '/consultancy/blog': typeof ConsultancyBlogRoute
+  '/consultancy/careers': typeof ConsultancyCareersRoute
   '/consultancy/contact': typeof ConsultancyContactRoute
+  '/consultancy/help': typeof ConsultancyHelpRoute
+  '/consultancy/pricing': typeof ConsultancyPricingRoute
   '/consultancy/services': typeof ConsultancyServicesRoute
+  '/consultancy/support': typeof ConsultancySupportRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/terms': typeof LegalTermsRoute
   '/management/about': typeof ManagementAboutRoute
   '/management/aura-animalia': typeof ManagementAuraAnimaliaRoute
+  '/management/blog': typeof ManagementBlogRoute
+  '/management/careers': typeof ManagementCareersRoute
   '/management/contact': typeof ManagementContactRoute
+  '/management/edithora-experience': typeof ManagementEdithoraExperienceRoute
+  '/management/g-and-r-plastics': typeof ManagementGAndRPlasticsRoute
+  '/management/help': typeof ManagementHelpRoute
   '/management/portfolio': typeof ManagementPortfolioRoute
+  '/management/pricing': typeof ManagementPricingRoute
+  '/management/services': typeof ManagementServicesRoute
+  '/management/support': typeof ManagementSupportRoute
   '/capital': typeof CapitalIndexRoute
   '/consultancy': typeof ConsultancyIndexRoute
   '/management': typeof ManagementIndexRoute
   '/api/rpc/$': typeof ApiRpcSplatRoute
+  '/consultancy/solutions/clickup': typeof ConsultancySolutionsClickupRoute
+  '/consultancy/solutions/ghl': typeof ConsultancySolutionsGhlRoute
+  '/consultancy/solutions/notion': typeof ConsultancySolutionsNotionRoute
+  '/consultancy/solutions/pm-tools': typeof ConsultancySolutionsPmToolsRoute
+  '/consultancy/solutions': typeof ConsultancySolutionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/capital': typeof CapitalRouteWithChildren
   '/consultancy': typeof ConsultancyRouteWithChildren
+  '/legal': typeof LegalRouteWithChildren
   '/management': typeof ManagementRouteWithChildren
   '/api/$': typeof ApiSplatRoute
   '/capital/about': typeof CapitalAboutRoute
+  '/capital/blog': typeof CapitalBlogRoute
+  '/capital/careers': typeof CapitalCareersRoute
   '/capital/contact': typeof CapitalContactRoute
+  '/capital/help': typeof CapitalHelpRoute
+  '/capital/pricing': typeof CapitalPricingRoute
   '/capital/services': typeof CapitalServicesRoute
+  '/capital/support': typeof CapitalSupportRoute
   '/consultancy/about': typeof ConsultancyAboutRoute
+  '/consultancy/blog': typeof ConsultancyBlogRoute
+  '/consultancy/careers': typeof ConsultancyCareersRoute
   '/consultancy/contact': typeof ConsultancyContactRoute
+  '/consultancy/help': typeof ConsultancyHelpRoute
+  '/consultancy/pricing': typeof ConsultancyPricingRoute
   '/consultancy/services': typeof ConsultancyServicesRoute
+  '/consultancy/solutions': typeof ConsultancySolutionsRouteWithChildren
+  '/consultancy/support': typeof ConsultancySupportRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/terms': typeof LegalTermsRoute
   '/management/about': typeof ManagementAboutRoute
   '/management/aura-animalia': typeof ManagementAuraAnimaliaRoute
+  '/management/blog': typeof ManagementBlogRoute
+  '/management/careers': typeof ManagementCareersRoute
   '/management/contact': typeof ManagementContactRoute
+  '/management/edithora-experience': typeof ManagementEdithoraExperienceRoute
+  '/management/g-and-r-plastics': typeof ManagementGAndRPlasticsRoute
+  '/management/help': typeof ManagementHelpRoute
   '/management/portfolio': typeof ManagementPortfolioRoute
+  '/management/pricing': typeof ManagementPricingRoute
+  '/management/services': typeof ManagementServicesRoute
+  '/management/support': typeof ManagementSupportRoute
   '/capital/': typeof CapitalIndexRoute
   '/consultancy/': typeof ConsultancyIndexRoute
   '/management/': typeof ManagementIndexRoute
   '/api/rpc/$': typeof ApiRpcSplatRoute
+  '/consultancy/solutions/clickup': typeof ConsultancySolutionsClickupRoute
+  '/consultancy/solutions/ghl': typeof ConsultancySolutionsGhlRoute
+  '/consultancy/solutions/notion': typeof ConsultancySolutionsNotionRoute
+  '/consultancy/solutions/pm-tools': typeof ConsultancySolutionsPmToolsRoute
+  '/consultancy/solutions/': typeof ConsultancySolutionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -192,67 +439,148 @@ export interface FileRouteTypes {
     | '/'
     | '/capital'
     | '/consultancy'
+    | '/legal'
     | '/management'
     | '/api/$'
     | '/capital/about'
+    | '/capital/blog'
+    | '/capital/careers'
     | '/capital/contact'
+    | '/capital/help'
+    | '/capital/pricing'
     | '/capital/services'
+    | '/capital/support'
     | '/consultancy/about'
+    | '/consultancy/blog'
+    | '/consultancy/careers'
     | '/consultancy/contact'
+    | '/consultancy/help'
+    | '/consultancy/pricing'
     | '/consultancy/services'
+    | '/consultancy/solutions'
+    | '/consultancy/support'
+    | '/legal/privacy'
+    | '/legal/terms'
     | '/management/about'
     | '/management/aura-animalia'
+    | '/management/blog'
+    | '/management/careers'
     | '/management/contact'
+    | '/management/edithora-experience'
+    | '/management/g-and-r-plastics'
+    | '/management/help'
     | '/management/portfolio'
+    | '/management/pricing'
+    | '/management/services'
+    | '/management/support'
     | '/capital/'
     | '/consultancy/'
     | '/management/'
     | '/api/rpc/$'
+    | '/consultancy/solutions/clickup'
+    | '/consultancy/solutions/ghl'
+    | '/consultancy/solutions/notion'
+    | '/consultancy/solutions/pm-tools'
+    | '/consultancy/solutions/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/legal'
     | '/api/$'
     | '/capital/about'
+    | '/capital/blog'
+    | '/capital/careers'
     | '/capital/contact'
+    | '/capital/help'
+    | '/capital/pricing'
     | '/capital/services'
+    | '/capital/support'
     | '/consultancy/about'
+    | '/consultancy/blog'
+    | '/consultancy/careers'
     | '/consultancy/contact'
+    | '/consultancy/help'
+    | '/consultancy/pricing'
     | '/consultancy/services'
+    | '/consultancy/support'
+    | '/legal/privacy'
+    | '/legal/terms'
     | '/management/about'
     | '/management/aura-animalia'
+    | '/management/blog'
+    | '/management/careers'
     | '/management/contact'
+    | '/management/edithora-experience'
+    | '/management/g-and-r-plastics'
+    | '/management/help'
     | '/management/portfolio'
+    | '/management/pricing'
+    | '/management/services'
+    | '/management/support'
     | '/capital'
     | '/consultancy'
     | '/management'
     | '/api/rpc/$'
+    | '/consultancy/solutions/clickup'
+    | '/consultancy/solutions/ghl'
+    | '/consultancy/solutions/notion'
+    | '/consultancy/solutions/pm-tools'
+    | '/consultancy/solutions'
   id:
     | '__root__'
     | '/'
     | '/capital'
     | '/consultancy'
+    | '/legal'
     | '/management'
     | '/api/$'
     | '/capital/about'
+    | '/capital/blog'
+    | '/capital/careers'
     | '/capital/contact'
+    | '/capital/help'
+    | '/capital/pricing'
     | '/capital/services'
+    | '/capital/support'
     | '/consultancy/about'
+    | '/consultancy/blog'
+    | '/consultancy/careers'
     | '/consultancy/contact'
+    | '/consultancy/help'
+    | '/consultancy/pricing'
     | '/consultancy/services'
+    | '/consultancy/solutions'
+    | '/consultancy/support'
+    | '/legal/privacy'
+    | '/legal/terms'
     | '/management/about'
     | '/management/aura-animalia'
+    | '/management/blog'
+    | '/management/careers'
     | '/management/contact'
+    | '/management/edithora-experience'
+    | '/management/g-and-r-plastics'
+    | '/management/help'
     | '/management/portfolio'
+    | '/management/pricing'
+    | '/management/services'
+    | '/management/support'
     | '/capital/'
     | '/consultancy/'
     | '/management/'
     | '/api/rpc/$'
+    | '/consultancy/solutions/clickup'
+    | '/consultancy/solutions/ghl'
+    | '/consultancy/solutions/notion'
+    | '/consultancy/solutions/pm-tools'
+    | '/consultancy/solutions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CapitalRoute: typeof CapitalRouteWithChildren
   ConsultancyRoute: typeof ConsultancyRouteWithChildren
+  LegalRoute: typeof LegalRouteWithChildren
   ManagementRoute: typeof ManagementRouteWithChildren
   ApiSplatRoute: typeof ApiSplatRoute
   ApiRpcSplatRoute: typeof ApiRpcSplatRoute
@@ -265,6 +593,13 @@ declare module '@tanstack/react-router' {
       path: '/management'
       fullPath: '/management'
       preLoaderRoute: typeof ManagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/consultancy': {
@@ -309,6 +644,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CapitalIndexRouteImport
       parentRoute: typeof CapitalRoute
     }
+    '/management/support': {
+      id: '/management/support'
+      path: '/support'
+      fullPath: '/management/support'
+      preLoaderRoute: typeof ManagementSupportRouteImport
+      parentRoute: typeof ManagementRoute
+    }
+    '/management/services': {
+      id: '/management/services'
+      path: '/services'
+      fullPath: '/management/services'
+      preLoaderRoute: typeof ManagementServicesRouteImport
+      parentRoute: typeof ManagementRoute
+    }
+    '/management/pricing': {
+      id: '/management/pricing'
+      path: '/pricing'
+      fullPath: '/management/pricing'
+      preLoaderRoute: typeof ManagementPricingRouteImport
+      parentRoute: typeof ManagementRoute
+    }
     '/management/portfolio': {
       id: '/management/portfolio'
       path: '/portfolio'
@@ -316,11 +672,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ManagementPortfolioRouteImport
       parentRoute: typeof ManagementRoute
     }
+    '/management/help': {
+      id: '/management/help'
+      path: '/help'
+      fullPath: '/management/help'
+      preLoaderRoute: typeof ManagementHelpRouteImport
+      parentRoute: typeof ManagementRoute
+    }
+    '/management/g-and-r-plastics': {
+      id: '/management/g-and-r-plastics'
+      path: '/g-and-r-plastics'
+      fullPath: '/management/g-and-r-plastics'
+      preLoaderRoute: typeof ManagementGAndRPlasticsRouteImport
+      parentRoute: typeof ManagementRoute
+    }
+    '/management/edithora-experience': {
+      id: '/management/edithora-experience'
+      path: '/edithora-experience'
+      fullPath: '/management/edithora-experience'
+      preLoaderRoute: typeof ManagementEdithoraExperienceRouteImport
+      parentRoute: typeof ManagementRoute
+    }
     '/management/contact': {
       id: '/management/contact'
       path: '/contact'
       fullPath: '/management/contact'
       preLoaderRoute: typeof ManagementContactRouteImport
+      parentRoute: typeof ManagementRoute
+    }
+    '/management/careers': {
+      id: '/management/careers'
+      path: '/careers'
+      fullPath: '/management/careers'
+      preLoaderRoute: typeof ManagementCareersRouteImport
+      parentRoute: typeof ManagementRoute
+    }
+    '/management/blog': {
+      id: '/management/blog'
+      path: '/blog'
+      fullPath: '/management/blog'
+      preLoaderRoute: typeof ManagementBlogRouteImport
       parentRoute: typeof ManagementRoute
     }
     '/management/aura-animalia': {
@@ -337,11 +728,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ManagementAboutRouteImport
       parentRoute: typeof ManagementRoute
     }
+    '/legal/terms': {
+      id: '/legal/terms'
+      path: '/terms'
+      fullPath: '/legal/terms'
+      preLoaderRoute: typeof LegalTermsRouteImport
+      parentRoute: typeof LegalRoute
+    }
+    '/legal/privacy': {
+      id: '/legal/privacy'
+      path: '/privacy'
+      fullPath: '/legal/privacy'
+      preLoaderRoute: typeof LegalPrivacyRouteImport
+      parentRoute: typeof LegalRoute
+    }
+    '/consultancy/support': {
+      id: '/consultancy/support'
+      path: '/support'
+      fullPath: '/consultancy/support'
+      preLoaderRoute: typeof ConsultancySupportRouteImport
+      parentRoute: typeof ConsultancyRoute
+    }
+    '/consultancy/solutions': {
+      id: '/consultancy/solutions'
+      path: '/solutions'
+      fullPath: '/consultancy/solutions'
+      preLoaderRoute: typeof ConsultancySolutionsRouteImport
+      parentRoute: typeof ConsultancyRoute
+    }
     '/consultancy/services': {
       id: '/consultancy/services'
       path: '/services'
       fullPath: '/consultancy/services'
       preLoaderRoute: typeof ConsultancyServicesRouteImport
+      parentRoute: typeof ConsultancyRoute
+    }
+    '/consultancy/pricing': {
+      id: '/consultancy/pricing'
+      path: '/pricing'
+      fullPath: '/consultancy/pricing'
+      preLoaderRoute: typeof ConsultancyPricingRouteImport
+      parentRoute: typeof ConsultancyRoute
+    }
+    '/consultancy/help': {
+      id: '/consultancy/help'
+      path: '/help'
+      fullPath: '/consultancy/help'
+      preLoaderRoute: typeof ConsultancyHelpRouteImport
       parentRoute: typeof ConsultancyRoute
     }
     '/consultancy/contact': {
@@ -351,12 +784,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsultancyContactRouteImport
       parentRoute: typeof ConsultancyRoute
     }
+    '/consultancy/careers': {
+      id: '/consultancy/careers'
+      path: '/careers'
+      fullPath: '/consultancy/careers'
+      preLoaderRoute: typeof ConsultancyCareersRouteImport
+      parentRoute: typeof ConsultancyRoute
+    }
+    '/consultancy/blog': {
+      id: '/consultancy/blog'
+      path: '/blog'
+      fullPath: '/consultancy/blog'
+      preLoaderRoute: typeof ConsultancyBlogRouteImport
+      parentRoute: typeof ConsultancyRoute
+    }
     '/consultancy/about': {
       id: '/consultancy/about'
       path: '/about'
       fullPath: '/consultancy/about'
       preLoaderRoute: typeof ConsultancyAboutRouteImport
       parentRoute: typeof ConsultancyRoute
+    }
+    '/capital/support': {
+      id: '/capital/support'
+      path: '/support'
+      fullPath: '/capital/support'
+      preLoaderRoute: typeof CapitalSupportRouteImport
+      parentRoute: typeof CapitalRoute
     }
     '/capital/services': {
       id: '/capital/services'
@@ -365,11 +819,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CapitalServicesRouteImport
       parentRoute: typeof CapitalRoute
     }
+    '/capital/pricing': {
+      id: '/capital/pricing'
+      path: '/pricing'
+      fullPath: '/capital/pricing'
+      preLoaderRoute: typeof CapitalPricingRouteImport
+      parentRoute: typeof CapitalRoute
+    }
+    '/capital/help': {
+      id: '/capital/help'
+      path: '/help'
+      fullPath: '/capital/help'
+      preLoaderRoute: typeof CapitalHelpRouteImport
+      parentRoute: typeof CapitalRoute
+    }
     '/capital/contact': {
       id: '/capital/contact'
       path: '/contact'
       fullPath: '/capital/contact'
       preLoaderRoute: typeof CapitalContactRouteImport
+      parentRoute: typeof CapitalRoute
+    }
+    '/capital/careers': {
+      id: '/capital/careers'
+      path: '/careers'
+      fullPath: '/capital/careers'
+      preLoaderRoute: typeof CapitalCareersRouteImport
+      parentRoute: typeof CapitalRoute
+    }
+    '/capital/blog': {
+      id: '/capital/blog'
+      path: '/blog'
+      fullPath: '/capital/blog'
+      preLoaderRoute: typeof CapitalBlogRouteImport
       parentRoute: typeof CapitalRoute
     }
     '/capital/about': {
@@ -386,6 +868,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/consultancy/solutions/': {
+      id: '/consultancy/solutions/'
+      path: '/'
+      fullPath: '/consultancy/solutions/'
+      preLoaderRoute: typeof ConsultancySolutionsIndexRouteImport
+      parentRoute: typeof ConsultancySolutionsRoute
+    }
+    '/consultancy/solutions/pm-tools': {
+      id: '/consultancy/solutions/pm-tools'
+      path: '/pm-tools'
+      fullPath: '/consultancy/solutions/pm-tools'
+      preLoaderRoute: typeof ConsultancySolutionsPmToolsRouteImport
+      parentRoute: typeof ConsultancySolutionsRoute
+    }
+    '/consultancy/solutions/notion': {
+      id: '/consultancy/solutions/notion'
+      path: '/notion'
+      fullPath: '/consultancy/solutions/notion'
+      preLoaderRoute: typeof ConsultancySolutionsNotionRouteImport
+      parentRoute: typeof ConsultancySolutionsRoute
+    }
+    '/consultancy/solutions/ghl': {
+      id: '/consultancy/solutions/ghl'
+      path: '/ghl'
+      fullPath: '/consultancy/solutions/ghl'
+      preLoaderRoute: typeof ConsultancySolutionsGhlRouteImport
+      parentRoute: typeof ConsultancySolutionsRoute
+    }
+    '/consultancy/solutions/clickup': {
+      id: '/consultancy/solutions/clickup'
+      path: '/clickup'
+      fullPath: '/consultancy/solutions/clickup'
+      preLoaderRoute: typeof ConsultancySolutionsClickupRouteImport
+      parentRoute: typeof ConsultancySolutionsRoute
+    }
     '/api/rpc/$': {
       id: '/api/rpc/$'
       path: '/api/rpc/$'
@@ -398,32 +915,73 @@ declare module '@tanstack/react-router' {
 
 interface CapitalRouteChildren {
   CapitalAboutRoute: typeof CapitalAboutRoute
+  CapitalBlogRoute: typeof CapitalBlogRoute
+  CapitalCareersRoute: typeof CapitalCareersRoute
   CapitalContactRoute: typeof CapitalContactRoute
+  CapitalHelpRoute: typeof CapitalHelpRoute
+  CapitalPricingRoute: typeof CapitalPricingRoute
   CapitalServicesRoute: typeof CapitalServicesRoute
+  CapitalSupportRoute: typeof CapitalSupportRoute
   CapitalIndexRoute: typeof CapitalIndexRoute
 }
 
 const CapitalRouteChildren: CapitalRouteChildren = {
   CapitalAboutRoute: CapitalAboutRoute,
+  CapitalBlogRoute: CapitalBlogRoute,
+  CapitalCareersRoute: CapitalCareersRoute,
   CapitalContactRoute: CapitalContactRoute,
+  CapitalHelpRoute: CapitalHelpRoute,
+  CapitalPricingRoute: CapitalPricingRoute,
   CapitalServicesRoute: CapitalServicesRoute,
+  CapitalSupportRoute: CapitalSupportRoute,
   CapitalIndexRoute: CapitalIndexRoute,
 }
 
 const CapitalRouteWithChildren =
   CapitalRoute._addFileChildren(CapitalRouteChildren)
 
+interface ConsultancySolutionsRouteChildren {
+  ConsultancySolutionsClickupRoute: typeof ConsultancySolutionsClickupRoute
+  ConsultancySolutionsGhlRoute: typeof ConsultancySolutionsGhlRoute
+  ConsultancySolutionsNotionRoute: typeof ConsultancySolutionsNotionRoute
+  ConsultancySolutionsPmToolsRoute: typeof ConsultancySolutionsPmToolsRoute
+  ConsultancySolutionsIndexRoute: typeof ConsultancySolutionsIndexRoute
+}
+
+const ConsultancySolutionsRouteChildren: ConsultancySolutionsRouteChildren = {
+  ConsultancySolutionsClickupRoute: ConsultancySolutionsClickupRoute,
+  ConsultancySolutionsGhlRoute: ConsultancySolutionsGhlRoute,
+  ConsultancySolutionsNotionRoute: ConsultancySolutionsNotionRoute,
+  ConsultancySolutionsPmToolsRoute: ConsultancySolutionsPmToolsRoute,
+  ConsultancySolutionsIndexRoute: ConsultancySolutionsIndexRoute,
+}
+
+const ConsultancySolutionsRouteWithChildren =
+  ConsultancySolutionsRoute._addFileChildren(ConsultancySolutionsRouteChildren)
+
 interface ConsultancyRouteChildren {
   ConsultancyAboutRoute: typeof ConsultancyAboutRoute
+  ConsultancyBlogRoute: typeof ConsultancyBlogRoute
+  ConsultancyCareersRoute: typeof ConsultancyCareersRoute
   ConsultancyContactRoute: typeof ConsultancyContactRoute
+  ConsultancyHelpRoute: typeof ConsultancyHelpRoute
+  ConsultancyPricingRoute: typeof ConsultancyPricingRoute
   ConsultancyServicesRoute: typeof ConsultancyServicesRoute
+  ConsultancySolutionsRoute: typeof ConsultancySolutionsRouteWithChildren
+  ConsultancySupportRoute: typeof ConsultancySupportRoute
   ConsultancyIndexRoute: typeof ConsultancyIndexRoute
 }
 
 const ConsultancyRouteChildren: ConsultancyRouteChildren = {
   ConsultancyAboutRoute: ConsultancyAboutRoute,
+  ConsultancyBlogRoute: ConsultancyBlogRoute,
+  ConsultancyCareersRoute: ConsultancyCareersRoute,
   ConsultancyContactRoute: ConsultancyContactRoute,
+  ConsultancyHelpRoute: ConsultancyHelpRoute,
+  ConsultancyPricingRoute: ConsultancyPricingRoute,
   ConsultancyServicesRoute: ConsultancyServicesRoute,
+  ConsultancySolutionsRoute: ConsultancySolutionsRouteWithChildren,
+  ConsultancySupportRoute: ConsultancySupportRoute,
   ConsultancyIndexRoute: ConsultancyIndexRoute,
 }
 
@@ -431,19 +989,47 @@ const ConsultancyRouteWithChildren = ConsultancyRoute._addFileChildren(
   ConsultancyRouteChildren,
 )
 
+interface LegalRouteChildren {
+  LegalPrivacyRoute: typeof LegalPrivacyRoute
+  LegalTermsRoute: typeof LegalTermsRoute
+}
+
+const LegalRouteChildren: LegalRouteChildren = {
+  LegalPrivacyRoute: LegalPrivacyRoute,
+  LegalTermsRoute: LegalTermsRoute,
+}
+
+const LegalRouteWithChildren = LegalRoute._addFileChildren(LegalRouteChildren)
+
 interface ManagementRouteChildren {
   ManagementAboutRoute: typeof ManagementAboutRoute
   ManagementAuraAnimaliaRoute: typeof ManagementAuraAnimaliaRoute
+  ManagementBlogRoute: typeof ManagementBlogRoute
+  ManagementCareersRoute: typeof ManagementCareersRoute
   ManagementContactRoute: typeof ManagementContactRoute
+  ManagementEdithoraExperienceRoute: typeof ManagementEdithoraExperienceRoute
+  ManagementGAndRPlasticsRoute: typeof ManagementGAndRPlasticsRoute
+  ManagementHelpRoute: typeof ManagementHelpRoute
   ManagementPortfolioRoute: typeof ManagementPortfolioRoute
+  ManagementPricingRoute: typeof ManagementPricingRoute
+  ManagementServicesRoute: typeof ManagementServicesRoute
+  ManagementSupportRoute: typeof ManagementSupportRoute
   ManagementIndexRoute: typeof ManagementIndexRoute
 }
 
 const ManagementRouteChildren: ManagementRouteChildren = {
   ManagementAboutRoute: ManagementAboutRoute,
   ManagementAuraAnimaliaRoute: ManagementAuraAnimaliaRoute,
+  ManagementBlogRoute: ManagementBlogRoute,
+  ManagementCareersRoute: ManagementCareersRoute,
   ManagementContactRoute: ManagementContactRoute,
+  ManagementEdithoraExperienceRoute: ManagementEdithoraExperienceRoute,
+  ManagementGAndRPlasticsRoute: ManagementGAndRPlasticsRoute,
+  ManagementHelpRoute: ManagementHelpRoute,
   ManagementPortfolioRoute: ManagementPortfolioRoute,
+  ManagementPricingRoute: ManagementPricingRoute,
+  ManagementServicesRoute: ManagementServicesRoute,
+  ManagementSupportRoute: ManagementSupportRoute,
   ManagementIndexRoute: ManagementIndexRoute,
 }
 
@@ -455,6 +1041,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CapitalRoute: CapitalRouteWithChildren,
   ConsultancyRoute: ConsultancyRouteWithChildren,
+  LegalRoute: LegalRouteWithChildren,
   ManagementRoute: ManagementRouteWithChildren,
   ApiSplatRoute: ApiSplatRoute,
   ApiRpcSplatRoute: ApiRpcSplatRoute,
